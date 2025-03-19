@@ -1,4 +1,5 @@
-# Einfalt REST API með .NET Core
+# todolisti
+Þetta er einfalt REST API með .NET Core. Hægt er að gera eftirfarandi:
 
 - GET /api/todo → Sækir öll to-do verkefni
 - POST /api/todo → Býr til to-do verkefni

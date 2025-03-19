@@ -1,5 +1,5 @@
 # todolisti
-Þetta er einfalt REST API með .NET Core. Hægt er að gera eftirfarandi:
+Einfalt REST API með .NET Core. Hægt er að gera eftirfarandi:
 
 - GET /api/todo → Sækir öll to-do verkefni
 - POST /api/todo → Býr til to-do verkefni
@@ -18,9 +18,9 @@
 ```
 - DELETE /api/todo/{id} → Eyðir to-do verkefni eftir id
 
+## Keyrsla og API Prófanir
 Hægt er að keyra verkefnið á `http://localhost:5193` með `dotnet run`
 
-## API Prófanir
 ### Swagger
 Hægt að skoða á `http://localhost:5193/swagger` í vafranum.
 

@@ -20,7 +20,23 @@ public class TodoController : ControllerBase
         return CreatedAtAction(nameof(GetAll), new { id = item.Id }, item);
     }
 
-    // DELETE /api/todo/{id} - Eyðir ákveðnu to-do verkefni
+    // PUT /api/todo/{id} - Breytir to-do verkefni eftir id
+    [HttpPut("{id}")]
+    public IActionResult UpdateTodo(int id, [FromBody] TodoItem updatedTodo)
+    {
+        var existingTodo = todos.FirstOrDefault(t => t.Id == id);
+        if (existingTodo == null)
+        {
+            return NotFound();
+        }
+
+        existingTodo.Task = updatedTodo.Task;
+        existingTodo.IsCompleted = updatedTodo.IsCompleted;
+
+        return Ok(existingTodo);
+    }
+
+    // DELETE /api/todo/{id} - Eyðir ákveðnu to-do verkefni eftir id
     [HttpDelete("{id}")]
     public IActionResult DeleteToDo(int id)
     {
